@@ -16,6 +16,6 @@
   },
   "devDependencies": {
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
-    "http-proxy-middleware": "^1.0.3"
+    "http-proxy-middleware": "^1.0.4"
   }
 }
