@@ -8,7 +8,7 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "node ./server/index.js",
+    "start": "nodemon ./server/index.js",
     "stress": "artillery run server/stress.yml",
     "stress-get": "artillery run server/stress_get.yml",
     "stress-post": "artillery run server/stress_post.yml"
