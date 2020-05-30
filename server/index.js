@@ -19,6 +19,7 @@ const relatedProxy = createProxyMiddleware({
 // app.use('/api/items/:id',apiProxy);
 // app.use('/api/allreviews/',reviewProxy);
 app.use('/api/related_products/:id',relatedProxy);
+app.use('/api/addProduct',relatedProxy);
 // app.use('/items/:id',itemsProxy);
 
 // app.get('/:id', (req, res) => {
