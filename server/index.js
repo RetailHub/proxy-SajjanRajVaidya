@@ -1,3 +1,5 @@
+require('newrelic');
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
@@ -9,7 +11,7 @@ app.use(express.static('public'))
 // const apiProxy = createProxyMiddleware({target: 'http://ec2-3-132-5-204.us-east-2.compute.amazonaws.com:3001'});
 // const reviewProxy = createProxyMiddleware({target: 'http://18.212.184.37:3004'});
 const relatedProxy = createProxyMiddleware({
-  target: 'http://18.219.35.67:3003',
+  target: 'http://localhost:3003',
   changeOrigin: true,
 });
 // const itemsProxy = createProxyMiddleware({target: 'http://34.201.53.74:3002'});
@@ -17,6 +19,7 @@ const relatedProxy = createProxyMiddleware({
 // app.use('/api/items/:id',apiProxy);
 // app.use('/api/allreviews/',reviewProxy);
 app.use('/api/related_products/:id',relatedProxy);
+app.use('/api/addProduct',relatedProxy);
 // app.use('/items/:id',itemsProxy);
 
 // app.get('/:id', (req, res) => {
